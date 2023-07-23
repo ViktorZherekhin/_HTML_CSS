@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Copatible" content="ie=edge">
+        <meta name="description" content="Free web tutorials">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <meta name="author" content="John Doe">
+        <title>
+            My new title pet-project site
+        </title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+        <style>
+            <!-- Можно здесь стили прописать, но это не очень хорошая практика
+                May be used if one single HTML page has a unique style.
+                Но, т.к. стили, заданные в этом разделе, прописаны после ссылки на CSS-файл (см. выше),
+                то они и будут применены (кто последний, тот и вОда).
+                И наоборот-->
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+    </head>
+
+    <body style="background-image: url(images/seversiyanie2.png);
+                 background-repeat: no-repeat;
+                 background-attachment: fixed;
+                 background-size: 100% 100%;">
+        <script src="./script/script.js">  // этот блок можно разместить также в блоке "head"
+            document.getElementById("element1").innerHTML = "My first JavaScript"
+           
+        </script>
+        <!-- Inline elements ("span", "img", "a"...):
+        - Don't start a new line;
+        - Only take needed width-->
+
+        <!-- Block elements ("div", "h1", "h6", "p"...):
+        - Start a new line;
+        - Take full width available ysOVn9yJ-->
+        <br> <b>Очередность применения стилей (№ 1 имеет высший приоритет):</b> <br>
+        1. Inline style (inside an HTML element) <br>
+        2. External and internal style sheets (in the head section) <br>
+        3. Browser default <br> <br>
+
+        The page title is very important for search engine optimization (SEO). <br>
+        The text is used by search engine algorithms to decide the order when listing pages in search results. <br>
+        The "title" element: displays a title for the page in search engine-results <br>
+
+        <button type="button" onclick="myFunction()">
+        Click me to display date and time!
+        </button> <br>
+        <button onclick="document.location='Default.html'">Open Default page</button><br>  <!--здесь уже применен JavaScript-->
+
+        Placing scripts at the bottom of the "body" element improves the display speed, 
+            because script interpretation slows down the display. <br>
+        <p id = "demo"> My new paragraph (10px - padding, 50px - margin) </p>
+        <div>Следующий текст будет написан справа налево <br> <bdo dir="rtl">аааа-вввв-гггг-дддд-жжжж</bdo> </div>
+        <div>Ссылка с 140 стандратными названиями цветов HTML находится <a href="https://www.w3schools.com/colors/colors_names.asp"><b>здесь</b></a>. </div>
+        <h1 id = "element1"> My 1 heading </h1>
+        <h2> Heading 2 </h2>        <!-- Ctrl + D - нажать дважды для двойного курсора-->
+        <h3> Heading 3 </h3>
+        <h4> Heading 4 </h4>
+        <h5> Heading 5 </h5>
+        <h6 style="font-size:larger;"> Heading 6 </h6>     <!-- Alt + Shift + Down arrow - создает дубликат строки-->
+ 
+        <a href="#poem">Ссылка на стихотворение в конце страницы</a>
+        <a href="https://www.w3schools.com" target="_blank"> Ссылка на ресурс w3schools.com </a><br><br>
+        <a href="mailto:someone@example.com">Send email</a>
+        <!--параметр "target": 
+            _self - Default. Opens the document in the same window/tab as it was clicked
+            _blank - Opens the document in a new window or tab
+            _parent - Opens the document in the parent frame
+            _top - Opens the document in the full body of the window-->
+
+        <br>
+        <a href="C://Data//_HTML_CSS" title="Перейти в Проводник"><img src="images/vscode_link.png" alt=""></a>
+        <!--The title attribute specifies extra information about an element. 
+            The information is most often shown as a tooltip text when the mouse moves over the element-->
+
+
+        <br>
+        <img src="images/image1.png" alt="Заказ с самовывозом" width="200" height="300">
+        <img src="images/image1.png" alt="Заказ с самовывозом" style="height: 300px;width: 200px;"> 
+        <img src="./images/workplace.jpg" alt="figures" usemap="#workmap" style="width: 300px; height: 300px;">
+        <map name="workmap">
+            <area shape="rect" coords="32,32,184,172" href="default.html" alt="rectangle">  
+            <area shape="circle" coords="302,106,25" href="Test1.html#workmap" alt="circle" onclick="myCircle()">  
+            <area shape="poly" coords="88,206,236,346,88,346" href="Test1.html#workmap" alt="" onclick="myTriangle()">
+        </map>
+
+        <script> 
+            function myCircle() {
+                alert("You choosen circle");
+            }
+            function myTriangle() {
+                alert("You choosen triangle");
+            }
+        </script>
+
+        <!--атрибут "Alt" отображается на странице вместо картинки, когда последняя не найдена на сервере
+             (Specifies an alternate text (desciption) for the image)-->    
+        <div>Здесь ширина первого рисунка переопределена через стили CSS. Поэтому стиль для рисунка лучше задавать
+            в самом тэге "img" (см. ниже)</div>
+        <div><cite>Заказ.</cite> Тэгом "cite" обозначается название книги, поэмы, картины, фильма, и т.п. (т.е. подпись
+            под картинкой) </div><br>
+
+        <picture>
+            <source media="(min-width: 650px)" srcset="./images/dog_big.jpg">
+            <source media="(min-width: 350px)" srcset="./images/dog_small.jpg">
+            <img src="./images/dog_small.png" alt="dog_small" style="width:auto;">
+        </picture> <br>
+
+     The "img" element is used by browsers that do not support the "picture" element, or if none of the "source" tags <br>
+     Resize the browser to see different versions of the picture loading at different viewport sizes. <br>
+The browser looks for the first source element where the media query matches the user's current viewport width,
+and fetches the image specified in the srcset attribute. <br>
+The "img" element is required as the last child tag of the "picture" declaration block. <br>
+The "img" element is used to provide backward compatibility for browsers that do not 
+support the "picture" element, or if none of the "source" tags matched. <br>
+Note: The "picture" element is not supported in IE12 and earlier or Safari 9.0 and earlier. <br>
+
+
+        
+        <p><img src="./images/pdf.png" alt="pdf-right" style="float: right;width: 45px; height: 45px;">
+            The image will float to the right of the text. The image will float to the right of the text. 
+            The image will float to the right of the text. The image will float to the right of the text. 
+            The image will float to the right of the text. The image will float to the right of the text.             
+            </p>
+        
+        <p><img src="./images/pdf.png" alt="pdf-left" style="float: left; width: 45px; height: 45px;">
+            The image will float to the left of the text. A paragraph with a floating image. 
+            A paragraph with a floating image. A paragraph with a floating image. 
+            A paragraph with a floating image. A paragraph with a floating image.
+            </p>
+
+
+        <div class="myclass"></div>             <!--   ввел: "div.myclass" + Enter  -->
+        <div class="myclass2"></div>            <!--   ввел: ".myclass2" + Enter  -->
+        <div id="id1"></div>                    <!--   ввел: "div#id1" + Enter  -->
+        <div id="id2" class="newclass"></div>   <!--   ввел: "div#id2.newclass" + Enter  -->
+        <p id="p1" style="background: rgba(255, 0, 0, 0.126);">    <!--   ввел: "p{this is the paragraph}" + Enter  -->
+            this is the centered paragraph (with id ="p1") <br>
+            An inline style CSS may be used to apply a unique style for a single element.
+            </p>           
+        
+            
+
+
+        <nav>                                   <!--   ввел: "nav>ul>li{Element1}" + Enter  -->
+            <ul>
+                <li>Element1</li>
+            </ul>
+        </nav>
+
+        <section class="mail-section">              <!--   ввел: "section.mail-section>h1.title{My title}+p.body{Body text here..}" --> 
+            <h1 class="title1 red1">My red aligned to the right TITLE (refers to two classes)..... </h1>            <!-- + Enter  -->
+            <p class="body" style="background-image: url(images/flowers.png); 
+                                    background-repeat: no-repeat; 
+                                    background-attachment: fixed; 
+                                    background-size: 100% 100%;">
+                Body text here..
+            </p>
+        </section>
+
+        <div></div>                         <!-- ввел: "div+(div>p>span>em^bq)+div" + Enter  -->
+        <div>
+            <p>
+                <span><em></em></span>        
+                <blockquote></blockquote>
+            </p>
+        </div>
+        <div></div>
+
+        <em><span class="class"></span></em>   <!-- ввел: "em>.class" + Enter  -->
+
+        <main>                              <!-- ввел: "main>(section>h1+p)+section" + Enter  -->
+            <section>
+                <h1></h1>
+                <p></p>
+            </section>
+            <section></section>
+        </main>
+
+        <ul>                                <!-- ввел: "ul>li*3" + Enter  -->
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <ul>                                <!-- ввел: "ul>.class" + Enter  -->
+            <li class="class"></li>
+        </ul>
+
+        <ul>                            <!-- ввел: "ul>li(Item $)*5" + Enter  -->
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+            <hr>
+        <ul>                                               <!-- ввел: "ul>li.item${Item $@3}*5" + Enter  -->
+            <li class="item1">specific element "li" with class = "item1" </li>
+            <li class="item2">Item 4</li>
+            <li class="item3">Item 5</li>
+            <li class="item4">Item 6</li>
+            <li class="item5">Item 7</li>
+        </ul>
+
+        <p title="My title"></p>                        <!-- ввел: "p[title = "My title"]" + Enter  -->
+        <a href=""></a>                                 <!-- ввел: "a" + Enter  -->
+        <a href="http://" target="_blank" rel="noopener noreferrer"></a>        <!-- ввел: "a:blank" + Enter  -->
+
+        <table class="tab1">  
+            <tr>                               <!-- ввел: "table>.row>.col" + Enter  -->
+                <th>Firstname</th>
+                <td class="dat1">Jill</td> 
+                <td class="dat1">Eve</td>
+                <td class="dat1">John</td>
+            </tr>
+            <tr>
+                <th>Lastname</th>    
+                <td>Smith</td>
+                <td>Jackson</td>
+                <td>Doe</td>
+                
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>50</td>
+                <td>25</td>
+                <td>80</td>
+            </tr>
+        </table> <br><br>
+
+
+        A table cell can contain all sorts of HTML elements: text, images, lists, links, other tables, etc. <br>
+        "th" stands for table header. "td" stands for table data. "tr" stands for table row.  <br>
+        By default, the text in "th" elements are bold and centered, but you can change that with CSS.<br><br>
+
+        <table class="tab2">                             <!-- ввел: "table>tr*7>td*3" + Enter  -->
+            <caption>Таблица контрагентов</caption>
+            <tr class="row2">
+                <th>Company</th>
+                <th colspan="2">Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr class="row2">
+                <td>Protecter & Gample</td>
+                <td>John</td>
+                <td>Smith</td>
+                <td>USA</td>
+            </tr>
+            <tr class="row2">
+                <td>Gazpromneft</td>
+                <td>Ivan</td>
+                <td>Ivanov</td>
+                <td>Russia</td>
+            </tr>
+            <tr class="row2">
+                <td>Milka</td>
+                <td>Mika</td>
+                <td>Hakkinen</td>
+                <td>Finland</td>
+            </tr>
+            <tr class="row2">
+                <td>Cherry</td>
+                <td>Si</td>
+                <td>Dzi Pin</td>
+                <td>China</td>
+            </tr>
+            <tr class="row2">
+                <td>Kommunarka</td>
+                <td>Taras</td>
+                <td>Bulba</td>
+                <td>Belarus</td>
+            </tr>
+            <tr class="row2">
+                <td>Deutche Welle</td>
+                <td>Michael</td>
+                <td>Shtirlitz</td>
+                <td>Germany</td>
+            </tr>
+        </table> <br>
+
+        <table class="tab3">
+            <tr>
+                <th class="head3">0</th>
+                <td style="border-style: dashed;">dashed</td>
+                <td style="border-style: dotted;">dotted</td>
+            </tr> 
+            <tr>
+                <td style="border-style: double; width: 50%;">double. Style: width=50%</td>
+                <td style="border-style: groove">groove</td>
+                <td style="border-style: hidden">hidden</td>
+            </tr>
+            <tr>
+                <td style="border-style: inherit">inherit</td>
+                <td style="border-style: inset">inset</td>
+                <td style="border-style: outset">outset</td>
+            </tr>
+            <tr>
+                <td style="border-style: ridge; height: 50px;">ridge. Style: height=50px</td>
+                <td style="border-style: unset">unset</td>
+                <td style="border-style: solid">solid</td>
+            </tr>
+        </table>
+
+        <br>
+        In this web development crash course, I will cram in as much about HTML as I can in about 30 minutes. 
+        If you are interested in learning HTML but <strong>know nothing</strong>, then you are in the right place. 
+        We will be creating a cheat sheet with all of the common HTML5 tags, attributes, semantic markup, etc. 
+        We will not be focusing on CSS in this video. See the link below for my CSS crash course video. 
+        <br><br>
+        This video is intended for beginners. 
+
+        <pre id="poem" font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;>  <!-- defines preformatted text  -->
+            My Bonnie lies over the ocean.
+          
+            My Bonnie lies over the s   e   a.
+          
+            My Bonnie lies over the ocean.
+          
+            Oh, bring back my Bonnie to me.
+        </pre>
+
+        <b>Bold text</b> <br>
+        <strong>Strong text</strong> <br>
+        <i>Italic text</i> <br>
+        <em>Emphasized text</em> <br>
+        <small>Some smaller text</small> <br>
+        <mark>This is a marked text</mark> <br>
+        <del>This is deleted text</del> <br>
+        <ins>This is inserted text</ins> <br>
+        This is <sub> subscript </sub> text <br>
+        This is <sup>superscript </sup> text <br>
+        <q>This is so called short quotation.</q> <br>
+
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+            This is BLOCKQUOTED text. <br> For 60 years, <abbr title="World Wide Fund">WWF</abbr> has worked to help 
+            people and nature thrive. As the world's leading conservation organization, 
+            WWF works in nearly 100 countries. At every level, we collaborate with 
+            people around the world to develop and deliver innovative solutions that 
+            protect communities, wildlife, and the places in which they live.
+        </blockquote> <br>
+
+        <address>
+            This is ADDRESS BLOCK <br>    
+            Written by John Doe.<br>
+            Visit us at:<br>
+            Example.com<br>
+            Box 564, Disneyland<br>
+            USA
+        </address>
+
+       
+
+
+    </body>
+
+</html>
+
+

@@ -1,0 +1,120 @@
+body {   
+    background-color: hsla(16, 31%, 45%, 0.329);  /* HSL stands for hue, saturation, and lightness. */
+}
+h1 {   /* selector */
+    color: rgb(250, 3, 3);  /* declaration */ 
+    text-align: center;         /* свойство: значение */
+}
+h2, h3 {                        /*  In this example we have grouped the selectors  */
+    color: DodgerBlue;
+}
+h4 {
+    border: 2px solid;
+    border-color: rgb(69, 33, 226);
+    border-radius:5px                       /* Never add a space between the property value (5) and the unit (px):  */
+}
+h5 {
+    margin-left: 20px;
+}
+
+
+
+p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    color: rgb(118, 121, 92);
+    background:  rgba(0, 255, 21, 0.126);    /* alpha = transparency of the color. 12,6% */
+    padding: 10px;  /* defines a padding (space) between the text and the border.   */
+    margin: 50px;  /* defines a margin (space) outside the border. */
+}
+
+#p1 {                       /* "p1" - is the ID name */ 
+    text-align: center;
+}
+
+
+bdo {
+    color: #3adb09;    /* A hexadecimal color is specified with: #RRGGBB, where the RR (red), 
+                            GG (green) and BB (blue) */  
+}
+
+a:link {
+    color: aqua;
+    background-color: antiquewhite;
+    text-decoration: wavy;
+    padding: 15px 25px;   /* для оформления в стиле "Кнопка" */
+}
+
+a:visited {
+    color: darkcyan;
+    background-color: antiquewhite;
+    text-decoration: line-through;
+    padding: 15px 25px;
+}
+
+a:hover {
+    color: darkviolet;
+    background-color: coral;
+    text-decoration: double;
+    padding: 15px 25px;
+}
+
+a:active {
+    color: gold;
+    background-color: lightblue;
+    text-decoration:overline;
+    padding: 15px 25px;
+}
+
+img {
+    width: 5%;
+}
+
+.title1 {                       /*  "title1" -  is the class name  */
+    text-align: right;
+}
+
+.red1 {
+    color: red;
+}
+
+li.item1 {                          /*   specify that only specific HTML elements should be affected by a class  */
+    text-decoration: underline;
+    color: darkorchid;
+    text-indent: 10px;
+}
+
+table.tab2 {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;                    /* Using a percentage as the size unit for a width means how wide  */
+    border-collapse: collapse;      /* will this element be compared to its parent element,  */
+                                    /*  which in this case is the <body> element. */
+}
+
+td, th {
+    border: 5px solid #a9bea3;
+    text-align: left;
+    padding: 8px;
+
+}
+
+tr:nth-child(even) {
+    background-color: rgba(251, 255, 8, 0.322);
+
+}
+
+table.tab1 {
+    border-collapse: separate;
+    border-radius: 10px;
+    width: 100%;
+}
+
+td.dat1 {
+    text-align: center;
+}
+
+table.tab3, th.head3 {
+    border: 5px solid #977575;
+    border-radius: 8px;
+   /* width: 100%;/*
+}
